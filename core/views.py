@@ -24,6 +24,6 @@ def create_images(request):
 
     # Initialize an empty JSON form.
     elif request.method == 'GET':
-        form = JsonForm(initial={'images_json': JsonForm.inital_json()})
+        form = JsonForm(initial={'images_json': JsonForm.initial_json()})
 
     return render(request, 'index.html', {'form': form})
