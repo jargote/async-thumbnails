@@ -24,11 +24,14 @@ On completion these workers will trigger a notification to the push server runni
 
 
 
-How to run
-    requirements
-	    1.  virtualenv
-		2.  python-setuptools (pip)
-		3.  nodejs
+
+##Prerequisites 
+
+Make sure you have this libraries installed in your system or virtual env.
+
+        1.  virtualenv
+        2.  python-setuptools (pip)
+        3.  nodejs
             *   express
             *   socket.io
 
@@ -37,7 +40,7 @@ How to run
     >>  virtualenv async-thumbs
     >>  cd async-thumbs
     >>  source ./bin/activate
-
+    
 copy project folder to current folder so it looks like… /async-thumbs/thumbs/
 
     >>  cd thumbs
@@ -47,15 +50,15 @@ copy project folder to current folder so it looks like… /async-thumbs/thumbs/
 
 
 ### Http Server (django)
-	>>  ./manage.py runserver
+    >>  ./manage.py runserver
 
 ### Push Server (nodejs)
-	>>  cd push-server/
-	>>  node server.js
+    >>  cd push-server/
+    >>  node server.js
 
 ### Celery Worker (run as many as you like to make it faster’)
-	>>  cd ..
-	>>  celery -A thumbs worker -l info
+    >>  cd ..
+    >>  celery -A thumbs worker -l info
 
 
 Visit http://localhost:8000 (default port)
