@@ -1,0 +1,13 @@
+Django==1.6.2
+Pillow==2.3.1
+amqp==1.4.4
+anyjson==0.3.3
+argparse==1.2.1
+billiard==3.3.0.16
+celery==3.1.10
+ipython==1.2.1
+kombu==3.0.14
+mock==1.0.1
+pytz==2014.2
+simplejson==3.3.3
+wsgiref==0.1.2

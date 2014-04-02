@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <form role="form" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="json">{{ form.images_json.label }}</label>
+            <textarea class="form-control" id="json" name="images_json" rows="10"
+                      placeholder="Type your json here">{{ form.images_json.value }}</textarea>
+        </div>
+        {% if form.images_json.errors %}
+        <div class="alert alert-danger">{{ form.images_json.errors.as_text }}</div>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Download</button>
+        <br/>
+        {% if request.method == 'POST'%}
+        <br/><div id="processing" class="alert alert-info">Processing...</div>
+        {% endif %}
+    </form>
+</div>
+<div class="row">
+    <br/>
+    <div id="thumbnails-gallery"><p>Your images will appear here went ready.</p></div>
+</div>
+
+{% endblock %}
