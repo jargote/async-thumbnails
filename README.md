@@ -23,7 +23,9 @@ Asynchronous tasks are send to the Celery workers running. These download and ge
 On completion these workers will trigger a notification to the push server running in NodeJS which means that the thumbnails are ready to be served.
 
 
+## Architecture Overview
 
+![Alt text](https://raw.githubusercontent.com/jargote/async-thumbnails/master/architecture_overview.jpg "Optional title")
 
 ##Prerequisites 
 
