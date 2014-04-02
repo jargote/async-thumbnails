@@ -2,7 +2,7 @@
 
 ## Description
 
-This project offers a django http server that generates thumbnails for the image urls given in a JSON format.
+This project offers a django http server that generates thumbnails for image urls given in a specific JSON format.
 
 
     json = {
