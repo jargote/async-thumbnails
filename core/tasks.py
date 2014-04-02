@@ -41,9 +41,9 @@ def notify_client(session_id, image_obj):
         url = settings.PUSH_SERVER + '/' + session_id + '/'
 
         # Notification data.
-        params = urllib.urlencode({
-          'thumbs': json.dumps(image_obj.thumbnails_urls)
-        });
+        params = urllib.urlencode(
+            {'thumbs': json.dumps(image_obj.thumbnails_urls)}
+        )
 
         # Notify push server.
         response = urllib2.urlopen(url, params).read()
